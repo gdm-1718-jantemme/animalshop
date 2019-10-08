@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TaskController!{% endblock %}
+
+{% block body %}
+    <h1> {{ "Wat moet er nog gebeuren"|trans }}?</h1>
+    {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+        {{ form_row(form.name) }}
+        {{ form_row(form.description) }}
+        {{ form_row(form.deadline) }}
+
+        {{ form_row(form.save) }}
+    {{ form_end(form) }}
+{% endblock %}
